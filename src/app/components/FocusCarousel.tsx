@@ -35,7 +35,7 @@ const focusAreas: Person[] = [
     {
         id: 5,
         name: "Rodrigo Rettig",
-        role: "Agenda legislativa",
+        role: "Agenda jurídica y seguridad",
         image: "/assets/rodrigo rettig.jpeg",
         bio: "Abogado litigante con sólida formación en derecho penal, compliance y ciencia política. Con más de 15 años de trayectoria profesional, ha conjugado la resolución de conflictos en criminalidad económica y tributaria con la gestión pública y el análisis estratégico. Su mirada cruza el rigor técnico-jurídico con la construcción institucional, aportando una visión cimentada en la filosofía liberal y la responsabilidad civil.",
     },
