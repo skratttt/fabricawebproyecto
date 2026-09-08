@@ -120,15 +120,14 @@ export default async function EstudioPage({ params }: { params: Promise<{ slug: 
                                 </ul>
 
                                 {estudio.pdfUrl ? (
-                                    <a
-                                        href={estudio.pdfUrl}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
+                                    <Link
+                                        href={`/estudios/${encodeURIComponent(slug)}/leer`}
+                                        prefetch={false}
                                         className="flex items-center justify-center gap-3 w-full bg-[#D81B60] text-white px-6 py-4 text-xs tracking-[0.1em] uppercase font-bold hover:bg-[#880E4F] transition-colors rounded-sm shadow-md"
                                     >
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg>
-                                        Descargar Producto
-                                    </a>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                                        Leer informe
+                                    </Link>
                                 ) : (
                                     <button
                                         disabled

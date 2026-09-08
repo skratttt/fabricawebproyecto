@@ -10,3 +10,6 @@ node_modules
 # Next.js build output
 .next/
 out/
+
+# Generated from the installed PDF.js version before dev/build
+/public/pdf-assets/

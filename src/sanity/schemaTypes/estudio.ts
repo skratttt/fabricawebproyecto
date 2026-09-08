@@ -21,8 +21,10 @@ export const estudio = defineType({
     defineField({
       name: "slug",
       title: "Slug",
+      description: "Forma parte del enlace público. No lo cambies después de compartir el informe, aunque reemplaces el PDF.",
       type: "slug",
       options: { source: "title", maxLength: 96 },
+      validation: (Rule) => Rule.required(),
     }),
     defineField({
       name: "abstract",
@@ -71,6 +73,7 @@ export const estudio = defineType({
     defineField({
       name: "pdfFile",
       title: "Archivo PDF",
+      description: "Se muestra en el lector de la web. Para corregirlo, reemplaza este archivo y publica sin cambiar el slug.",
       type: "file",
       options: { accept: ".pdf" },
     }),

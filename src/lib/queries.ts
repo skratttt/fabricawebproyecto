@@ -85,6 +85,6 @@ export async function getEstudioBySlug(slug: string): Promise<Estudio | null> {
       "pdfUrl": pdfFile.asset->url
     }`,
     { slug },
-    { next: { revalidate: 60 } }
+    { cache: "no-store", perspective: "published" }
   );
 }

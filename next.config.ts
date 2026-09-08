@@ -1,6 +1,11 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  webpack(config) {
+    // Avoid PDF.js's internal webpack identifiers colliding with Next's dev wrapper.
+    config.resolve.alias["pdfjs-dist$"] = "pdfjs-dist/build/pdf.min.mjs";
+    return config;
+  },
   async redirects() {
     return [
       {
